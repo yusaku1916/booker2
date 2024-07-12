@@ -1,0 +1,18 @@
+<div>
+  <h2>Books</h2>
+  <table>
+    <tr>
+      <th></th>
+      <th>Title</th>
+      <th>Opinin</th>
+      <th></th>
+    </tr>
+    <% books.each do |book| %>
+    <tr>
+      <th><%= book.user_id %></th>
+      <th><%= book.title %></th>
+      <th><%= book.body %></th>
+    </tr>
+    <% end %>
+  </table>
+</div>

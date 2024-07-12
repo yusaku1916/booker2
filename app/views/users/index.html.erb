@@ -1,0 +1,19 @@
+<%= render 'books/user', user: @user %>
+<div>
+  <h2>Users</h2>
+  <table>
+    <tr>
+      <th></th>
+      <th>Title</th>
+      <th>Opinin</th>
+      <th></th>
+    </tr>
+    <% @users.each do |users| %>
+    <tr>
+      <th><%= users.id %></th>
+      <th><%= users.name %></th>
+      <th><%= users.introduction %></th>
+    </tr>
+    <% end %>
+  </table>
+</div>

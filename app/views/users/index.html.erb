@@ -1,19 +1,17 @@
 <%= render 'books/user', user: @user %>
-<div class="col-md-1" style="background-color: #000;"></div>
-<div class="col-md-8" style="background-color: #ddd;">
+<div class="col-md-1"></div>
+<div class="col-md-8">
   <h2>Users</h2>
   <table class="table table-striped">
     <tr>
-      <th></th>
+      <th>image</th>
       <th>Title</th>
-      <th>Opinin</th>
       <th></th>
     </tr>
     <% @users.each do |user| %>
     <tr>
       <td><%= user.id %></td>
       <td><%= user.name %></td>
-      <td><%= user.introduction %></td>
       <td><%= link_to "Show",  user_path(user.id) %></td>
     </tr>
     <% end %>

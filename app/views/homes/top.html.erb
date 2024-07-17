@@ -3,5 +3,25 @@
     <%= flash[:notice] %>
   </div>
 </div>
-<h1>Homes#top</h1>
-<p>Find me in app/views/homes/top.html.erb</p>
+<div class="col-md-6 mx-auto">
+  <div class="container">
+    <div class="row">
+      <h2>Welcome to <i class="fa-solid fa-book"></i>Bookers !!</h2>
+    </div>
+    <div class="row">
+      <p>In <i class="fa-solid fa-book"></i>Bookers,</p>
+    </div>
+    <div class="row">
+      <p>you can share and exchange your opinions , inpressions , and emotions about various books!</p>
+    </div>
+    <div class="mx-auto">
+      <div class="row">
+        <%= link_to "Log in", new_user_session_path, class: "btn btn-info col-md-10 mx-auto mt-3" %>
+      </div>
+      <div class="row">
+        <%= link_to "Sign up", new_user_registration_path, class: "btn btn-success col-md-10 mx-auto mt-3" %>
+      </div>
+    </div>
+  </div>
+</div>
+

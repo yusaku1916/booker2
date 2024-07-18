@@ -5,8 +5,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @books = Book.where(user_id: current_user.id)
-    @user = User.find(current_user.id)
+    @books = Book.where(user_id: params[:id])
+    @user = User.find(params[:id])
   end
 
   def edit

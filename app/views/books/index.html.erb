@@ -1,18 +1,15 @@
-<div class="container">
-  <div class="row">
-  <% if flash[:error] %>
-    <div class="error-messages">
-      <h2><%= flash[:error]["count"] %> errors prohibited this obj from being saved:</h2>
-      <ul>
-        <% flash[:error]["messages"].each do |message| %>
-        <p><%= message %></p>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<% if flash[:error] %>
+  <div class="error-messages">
+    <h2><%= flash[:error]["count"] %> errors prohibited this obj from being saved:</h2>
+    <ul>
+      <% flash[:error]["messages"].each do |message| %>
+      <p><%= message %></p>
+      <% end %>
+    </ul>
   </div>
-</div>
+<% end %>
 
-<%= render 'books/user', user: @user %>
-<div class="col-md-1"></div>
-<%= render 'books/book', books: @books %>
+<div class="row">
+  <%= render 'books/user', user: @user %>
+  <%= render 'books/book', books: @books %>
+</div>

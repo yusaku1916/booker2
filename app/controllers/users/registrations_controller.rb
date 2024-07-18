@@ -1,7 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   def create
     super
-    
-    flash[:notice] = "Welcome! You have signed up successfully!"
+    flash[:notice] = "Welcome! You have signed up successlly."
   end
 end

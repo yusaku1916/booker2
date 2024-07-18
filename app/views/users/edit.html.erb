@@ -1,5 +1,21 @@
 <div class="col-md-6 mx-auto">
   <h2>User Info</h2>
+  
+  <div class="container">
+    <div class="row">
+    <% if @user.errors.any? %>
+      <div class="error-messages">
+        <h2><%= @user.errors.count %> errors prohibited this obj from being saved:</h2>
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+          <p><%= message %></p>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    </div>
+  </div>
+  
   <div class="form-body">
     <%= form_with model: @user do |f| %>
     <div class="form-group">
